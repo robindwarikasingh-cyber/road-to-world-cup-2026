@@ -1,0 +1,281 @@
+/* Global settings applied to all page elements */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Main body styling for the whole blog page */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7f2;
+  color: #1f2d1f;
+  line-height: 1.6;
+}
+
+/* Hero section with football background image and dark overlay */
+.hero {
+  background: linear-gradient(rgba(0, 60, 30, 0.85), rgba(0, 60, 30, 0.85)),
+    url("/stadium-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Main title inside the hero section */
+.hero h1 {
+  font-size: 42px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Short introduction text inside the hero section */
+.hero p {
+  font-size: 18px;
+  max-width: 750px;
+  margin: 15px auto 0;
+}
+
+/* Navigation bar that stays at the top while scrolling */
+.navbar {
+  background-color: #0b3d20;
+  padding: 14px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navigation links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 14px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Hover effect for navigation links */
+.navbar a:hover {
+  color: #f7d046;
+}
+
+/* Intro card that explains the blog purpose */
+.intro {
+  max-width: 1100px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #1f8f4d;
+}
+
+/* Intro section heading */
+.intro h2 {
+  margin-top: 0;
+  color: #0b3d20;
+}
+
+/* Blog container that holds the three post cards */
+.blog-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+/* Individual blog post card design */
+.post-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling for each blog post */
+.post-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text area inside each blog post */
+.post-content {
+  padding: 24px;
+}
+
+/* Blog post headings */
+.post-content h2 {
+  margin-top: 0;
+  color: #0b3d20;
+}
+
+/* Small post label/date text */
+.post-date {
+  color: #52745b;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Highlight box used to emphasize a key point in each post */
+.highlight {
+  background-color: #e9f7ee;
+  border-left: 5px solid #1f8f4d;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+/* Makes blog post headings look like clickable article links */
+.post-title-link {
+  color: #0b3d20;
+  text-decoration: none;
+}
+
+/* Hover effect for blog post title links */
+.post-title-link:hover {
+  color: #1f8f4d;
+}
+
+/* Read More button used on each homepage preview card */
+.read-more {
+  display: inline-block;
+  margin-top: 12px;
+  background-color: #0b3d20;
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Hover effect for Read More buttons */
+.read-more:hover {
+  background-color: #1f8f4d;
+}
+/* Footer section at the bottom of the blog */
+footer {
+  background-color: #0b3d20;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 30px;
+}
+
+/* Footer paragraph spacing */
+footer p {
+  margin: 6px 0;
+}
+/* Full blog post page layout */
+.full-post {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Main image on each full post page */
+.full-post img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Heading inside the full post page */
+.full-post h2 {
+  color: #0b3d20;
+  margin-top: 0;
+}
+
+/* Back to Home link */
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #0b3d20;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Back to Home hover effect */
+.back-link:hover {
+  color: #1f8f4d;
+}
+/* Responsive layout for tablets and desktop screens */
+@media (min-width: 800px) {
+  .blog-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .post-card img {
+    height: 210px;
+  }
+}
+/* Reply box section under each blog post */
+.reply-box {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f4f7f2;
+  border-radius: 10px;
+  border: 1px solid #d6e6d8;
+}
+
+/* Reply box heading */
+.reply-box h3 {
+  margin-top: 0;
+  color: #0b3d20;
+  font-size: 18px;
+}
+
+/* Reply input and textarea fields */
+.reply-box input,
+.reply-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #b8c9bb;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* Reply textarea size */
+.reply-box textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Reply button styling */
+.reply-box button {
+  background-color: #0b3d20;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Reply button hover effect */
+.reply-box button:hover {
+  background-color: #1f8f4d;
+}
+/* Mobile-friendly layout for smaller screens */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 8px 0;
+  }
+}

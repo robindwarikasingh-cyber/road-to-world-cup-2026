@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import "./style.css"
 
 // Full blog post page for Post 1
@@ -7,7 +7,13 @@ const Why2026IsSpecial = () => {
   return (
     <main>
       {/* Hero section used at the top of the individual post page */}
-      <header className="hero">
+      <header
+        className="hero"
+        id="home"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 60, 30, 0.85), rgba(0, 60, 30, 0.85)), url(${withPrefix("/stadium-banner.jpg")})`,
+        }}
+      >
         <div className="hero-content">
           <h1>Why the 2026 World Cup Is Special</h1>
           <p>Post 1 | June 11, 2026 | 10:00 AM</p>
@@ -25,7 +31,7 @@ const Why2026IsSpecial = () => {
       {/* Full post content */}
       <section className="full-post">
         <img
-          src="/football-special.jpg"
+          src={withPrefix("/football-special.jpg")}
           alt="Football players gathered in a team huddle"
         />
 

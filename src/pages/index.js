@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import "./style.css"
 
 // Main Gatsby homepage component for the World Cup blog
@@ -7,7 +7,13 @@ const IndexPage = () => {
   return (
     <main>
       {/* Hero section: displays the main title and short blog description */}
-      <header className="hero" id="home">
+      <header
+        className="hero"
+        id="home"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 60, 30, 0.85), rgba(0, 60, 30, 0.85)), url(${withPrefix("/stadium-banner.jpg")})`,
+        }}
+      >
         <div className="hero-content">
           <h1>Road to World Cup 2026</h1>
           <p>
@@ -43,7 +49,7 @@ const IndexPage = () => {
         {/* Preview card for Post 1 */}
         <article className="post-card">
           <img
-            src="/football-special.jpg"
+            src={withPrefix("/football-special.jpg")}
             alt="Football players gathered in a team huddle"
           />
 
@@ -71,7 +77,7 @@ const IndexPage = () => {
         {/* Preview card for Post 2 */}
         <article className="post-card">
           <img
-            src="/football-fans.jpg"
+            src={withPrefix("/football-fans.jpg")}
             alt="Football fans celebrating and supporting teams"
           />
 
@@ -99,7 +105,7 @@ const IndexPage = () => {
         {/* Preview card for Post 3 */}
         <article className="post-card">
           <img
-            src="/teams-to-watch.jpg"
+            src={withPrefix("/teams-to-watch.jpg")}
             alt="Graphic showing football nations to watch"
           />
 
